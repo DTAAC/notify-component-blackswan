@@ -29,7 +29,7 @@ class NotifyManager {
     return '_' + Math.random().toString(36).substr(2, 9);
   }
   static normalizeText(value) {
-    if ( /*#__PURE__*/_react.default.isValidElement(value)) {
+    if (/*#__PURE__*/_react.default.isValidElement(value)) {
       // Если это React-компонент, возвращаем его как есть
       return value;
     }
@@ -68,14 +68,13 @@ class NotifyManager {
     }, time);
   }
   static addOrOnce(id, title, text, type, time, onClick, onClose) {
-    var _NotifyManager$contai, _NotifyManager$contai2;
     let checkIfExists = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : false;
     if (!NotifyManager.container) {
       console.error('NotifyManager: контейнер не привязан');
       return;
     }
-    const finalId = id !== null && id !== void 0 ? id : NotifyManager.id();
-    if (checkIfExists && (_NotifyManager$contai = (_NotifyManager$contai2 = NotifyManager.container).hasItem) !== null && _NotifyManager$contai !== void 0 && _NotifyManager$contai.call(_NotifyManager$contai2, finalId)) {
+    const finalId = id ?? NotifyManager.id();
+    if (checkIfExists && NotifyManager.container.hasItem?.(finalId)) {
       return;
     }
     const notify = NotifyManager.createNotifyElement(finalId, type, text, time, onClick, onClose);
@@ -90,12 +89,10 @@ class NotifyManager {
     return NotifyManager.addOrOnce(jobTypeId, title, text, type, time, onClick, onClose, true);
   }
   static delete(jobTypeId) {
-    var _NotifyManager$contai3;
-    (_NotifyManager$contai3 = NotifyManager.container) === null || _NotifyManager$contai3 === void 0 || _NotifyManager$contai3.removeItem(jobTypeId);
+    NotifyManager.container?.removeItem(jobTypeId);
   }
   static update(jobTypeId, percent) {
-    var _NotifyManager$contai4;
-    (_NotifyManager$contai4 = NotifyManager.container) === null || _NotifyManager$contai4 === void 0 || _NotifyManager$contai4.updateItem(jobTypeId, percent);
+    NotifyManager.container?.updateItem(jobTypeId, percent);
   }
   static bind(container) {
     this.container = container;
