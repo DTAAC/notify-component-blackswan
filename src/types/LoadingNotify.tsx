@@ -3,11 +3,7 @@ import NotifyManager from "../NotifyManager";
 import BaseNotifyProps from "./BaseNotifyProps";
 import useRendered from "./hooks/useRendered";
 import getNotifyStyle from "./getNotifyStyle";
-import {NotifyItem} from "./../styles";
-// @ts-ignore
-import closeErrorIcon from '../images/ic_close_error.svg';
-// @ts-ignore
-import loader from '../images/loader.svg';
+import {NotifyItem} from "../styles";
 import {Content, Preload} from './styles';
 
 interface LoadingNotifyProps extends BaseNotifyProps {
@@ -30,8 +26,8 @@ export const LoadingNotify: React.FC<LoadingNotifyProps> = ({
                 <div style={{ width: percent && percent > 0 ? `${percent}%` : '0%' }} />
             </Preload>
             <Content>
-                <img className="load" src={loader} alt="" />
-                <img src={closeErrorIcon} className="close" alt="Close" onClick={() => NotifyManager.delete(id)} />
+                <img className="load" src={'../images/loader.svg'} alt="" />
+                <img src={'../images/ic_close_error.svg'} className="close" alt="Close" onClick={() => NotifyManager.delete(id)} />
                 <div className="text">{text}</div>
             </Content>
         </NotifyItem>
