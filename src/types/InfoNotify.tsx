@@ -3,7 +3,8 @@ import NotifyManager from "../NotifyManager";
 import BaseNotifyProps from "./BaseNotifyProps";
 import useRendered from "./hooks/useRendered";
 import getNotifyStyle from "./getNotifyStyle";
-import {NotifyItem} from "../styles";
+import {NotifyItem} from "./../styles";
+//@ts-ignore
 import {Content} from './styles';
 
 export const InfoNotify: React.FC<BaseNotifyProps> = ({
@@ -18,7 +19,7 @@ export const InfoNotify: React.FC<BaseNotifyProps> = ({
     return (
         <NotifyItem style={style} onClick={onClick}>
             <Content>
-                <img src={'../images/ic_close_error.svg'} className="close" alt="Close" onClick={() => NotifyManager.delete(id)} />
+                <img src={'../images/close.svg'} className="close" alt="Close" onClick={() => NotifyManager.delete(id)} />
                 <div className="text">{text}</div>
             </Content>
         </NotifyItem>

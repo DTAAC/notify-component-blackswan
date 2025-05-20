@@ -26,7 +26,7 @@ export const ErrorNotify: React.FC<BaseNotifyProps> = ({
         }} onClick={onClick}>
             <Content>
                 <div className="text">{text}</div>
-                <img src={'../images/ic_close_error.svg'} className="close" alt="Close" onClick={() => NotifyManager.delete(id)} />
+                <img src={'../images/close.svg'} className="close" alt="Close" onClick={() => NotifyManager.delete(id)} />
             </Content>
         </NotifyItem>
     );

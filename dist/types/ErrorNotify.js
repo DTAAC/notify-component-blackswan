@@ -37,7 +37,7 @@ const ErrorNotify = _ref => {
         className: "text",
         children: text
       }), /*#__PURE__*/(0, _jsxRuntime.jsx)("img", {
-        src: '../images/ic_close_error.svg',
+        src: '../images/close.svg',
         className: "close",
         alt: "Close",
         onClick: () => _NotifyManager.default.delete(id)
