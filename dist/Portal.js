@@ -16,7 +16,7 @@ const Portal = _ref => {
   (0, _react.useEffect)(() => {
     const rootElement = document.getElementById(id);
     if (!rootElement) {
-      console.error("Portal: \u044D\u043B\u0435\u043C\u0435\u043D\u0442 \u0441 id \"".concat(id, "\" \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D."));
+      console.error(`Portal: элемент с id "${id}" не найден.`);
       return;
     }
     try {

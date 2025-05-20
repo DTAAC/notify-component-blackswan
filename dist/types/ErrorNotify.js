@@ -9,7 +9,6 @@ var _NotifyManager = _interopRequireDefault(require("../NotifyManager"));
 var _useRendered = _interopRequireDefault(require("./hooks/useRendered"));
 var _getNotifyStyle = _interopRequireDefault(require("./getNotifyStyle"));
 var _styles = require("./../styles");
-var _ic_close_error = _interopRequireDefault(require("../images/ic_close_error.svg"));
 var _styles2 = require("./styles");
 var _jsxRuntime = require("react/jsx-runtime");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
@@ -38,7 +37,7 @@ const ErrorNotify = _ref => {
         className: "text",
         children: text
       }), /*#__PURE__*/(0, _jsxRuntime.jsx)("img", {
-        src: _ic_close_error.default,
+        src: '../images/ic_close_error.svg',
         className: "close",
         alt: "Close",
         onClick: () => _NotifyManager.default.delete(id)

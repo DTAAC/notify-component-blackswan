@@ -5,9 +5,76 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.NotifyItem = void 0;
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
-var _templateObject, _templateObject2;
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-function _taggedTemplateLiteral(e, t) { return t || (t = e.slice(0)), Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })); }
-const rotate = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    transform: rotate(0deg);\n  }\n\n  to {\n    transform: rotate(360deg);\n  }\n"])));
-const NotifyItem = exports.NotifyItem = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  color: #000;\n  line-height: 16px;\n  position: relative;\n  font-weight: 500;\n  background: #EFF2F5;\n  cursor: pointer;\n  margin-bottom: 15px;\n  transition: .3s ease left;\n  width: 320px;\n  left: 320px;\n  font-size: 14px;\n  pointer-events: auto;\n  \n  box-shadow: rgb(38 38 38 / 4%) 0 1px 2px, rgb(38 38 38 / 16%) 0 4px 8px;\n\n  &:before {\n    position: absolute;\n    top: 50%;\n    left: 15px;\n    margin-top: -14px;\n    display: block;\n    width: 28px;\n    height: 28px;\n    font-size: 28px;\n    text-align: center;\n  }\n  \n  img.load,\n  svg.load {\n    width: 25px;\n    height: 25px;\n    animation: ", " 2s linear infinite;\n    margin-right: 14px;\n    margin-left: 10px;\n  }\n\n  /* \u041E\u0431\u044A\u0435\u0434\u0438\u043D\u044F\u0435\u043C \u0441\u0442\u0438\u043B\u0438 \u0434\u043B\u044F \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432 \u0441 \u043A\u043B\u0430\u0441\u0441\u043E\u043C .close */\n  img.close,\n  svg.close {\n    position: absolute;\n    width: 25px;\n    height: 25px;\n    left: 265px;\n    margin-right: 14px;\n    cursor: pointer;\n    transition: opacity 0.3s ease;\n  }\n\n  img.close:hover,\n  svg.close:hover {\n    opacity: 0.9;\n  }\n  \n  .text{\n    width: 180px;\n  }\n  \n  &:hover{\n   opacity: 0.7; \n  }\n"])), rotate);
+function _interopRequireWildcard(e, t) { if ("function" == typeof WeakMap) var r = new WeakMap(), n = new WeakMap(); return (_interopRequireWildcard = function (e, t) { if (!t && e && e.__esModule) return e; var o, i, f = { __proto__: null, default: e }; if (null === e || "object" != typeof e && "function" != typeof e) return f; if (o = t ? n : r) { if (o.has(e)) return o.get(e); o.set(e, f); } for (const t in e) "default" !== t && {}.hasOwnProperty.call(e, t) && ((i = (o = Object.defineProperty) && Object.getOwnPropertyDescriptor(e, t)) && (i.get || i.set) ? o(f, t, i) : f[t] = e[t]); return f; })(e, t); }
+const rotate = (0, _styledComponents.keyframes)`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+const NotifyItem = exports.NotifyItem = _styledComponents.default.div`
+  box-sizing: border-box;
+  color: #000;
+  line-height: 16px;
+  position: relative;
+  font-weight: 500;
+  background: #EFF2F5;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: .3s ease left;
+  width: 320px;
+  left: 320px;
+  font-size: 14px;
+  pointer-events: auto;
+  
+  box-shadow: rgb(38 38 38 / 4%) 0 1px 2px, rgb(38 38 38 / 16%) 0 4px 8px;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -14px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  img.load,
+  svg.load {
+    width: 25px;
+    height: 25px;
+    animation: ${rotate} 2s linear infinite;
+    margin-right: 14px;
+    margin-left: 10px;
+  }
+
+  /* Объединяем стили для элементов с классом .close */
+  img.close,
+  svg.close {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 265px;
+    margin-right: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  img.close:hover,
+  svg.close:hover {
+    opacity: 0.9;
+  }
+  
+  .text{
+    width: 180px;
+  }
+  
+  &:hover{
+   opacity: 0.7; 
+  }
+`;
