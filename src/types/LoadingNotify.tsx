@@ -3,8 +3,10 @@ import NotifyManager from "../NotifyManager";
 import BaseNotifyProps from "./BaseNotifyProps";
 import useRendered from "./hooks/useRendered";
 import getNotifyStyle from "./getNotifyStyle";
-import {NotifyItem} from "./../styles";
+import {NotifyItem} from "../styles";
 import {Content, Preload} from './styles';
+import loaderIcon from '../images/loader.svg';
+
 
 interface LoadingNotifyProps extends BaseNotifyProps {
     percent?: number;
@@ -26,7 +28,7 @@ export const LoadingNotify: React.FC<LoadingNotifyProps> = ({
                 <div style={{width: percent && percent > 0 ? `${percent}%` : '0%'}}/>
             </Preload>
             <Content>
-                <img className="load" src={'../images/loader.svg'} alt=""/>
+                <img className="load" src={loaderIcon as string} alt=""/>
                 <svg className="close" onClick={() => NotifyManager.delete(id)}
                      width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="24" height="24" rx="12" fill="#EFF2F5"/>
