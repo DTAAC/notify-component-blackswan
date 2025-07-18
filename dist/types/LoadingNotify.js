@@ -10,7 +10,6 @@ var _useRendered = _interopRequireDefault(require("./hooks/useRendered"));
 var _getNotifyStyle = _interopRequireDefault(require("./getNotifyStyle"));
 var _styles = require("../styles");
 var _styles2 = require("./styles");
-var _loader = _interopRequireDefault(require("../images/loader.svg"));
 var _jsxRuntime = require("react/jsx-runtime");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 const LoadingNotify = _ref => {
@@ -33,10 +32,35 @@ const LoadingNotify = _ref => {
         }
       })
     }), /*#__PURE__*/(0, _jsxRuntime.jsxs)(_styles2.Content, {
-      children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("img", {
-        className: "load",
-        src: _loader.default,
-        alt: ""
+      children: [/*#__PURE__*/(0, _jsxRuntime.jsxs)("svg", {
+        className: `load`,
+        width: "80",
+        height: "80",
+        viewBox: "0 0 80 80",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          d: "M40 11.6665C24.352 11.6665 11.6667 24.3518 11.6667 39.9998C11.6667 53.7015 21.3974 65.1415 34.328 67.7663C37.0342 68.3157 38.7828 70.9548 38.2334 73.661C37.6841 76.3673 35.0449 78.1158 32.3387 77.5665C14.8394 74.0143 1.66669 58.551 1.66669 39.9998C1.66669 18.8289 18.8291 1.6665 40 1.6665C61.1709 1.6665 78.3334 18.8289 78.3334 39.9998C78.3334 57.8685 66.112 72.8701 49.5797 77.1252C46.9054 77.8135 44.1795 76.2036 43.4912 73.5293C42.8029 70.855 44.4128 68.1291 47.0871 67.4408C59.3085 64.2953 68.3334 53.1952 68.3334 39.9998C68.3334 24.3518 55.6481 11.6665 40 11.6665Z",
+          fill: "url(#paint0_linear)"
+        }), /*#__PURE__*/(0, _jsxRuntime.jsx)("defs", {
+          children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("linearGradient", {
+            id: "paint0_linear",
+            x1: "18.9688",
+            y1: "66.6486",
+            x2: "44.7472",
+            y2: "77.6674",
+            gradientUnits: "userSpaceOnUse",
+            children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("stop", {
+              stopColor: "#4378FF"
+            }), /*#__PURE__*/(0, _jsxRuntime.jsx)("stop", {
+              offset: "1",
+              stopColor: "#4378FF",
+              stopOpacity: "0.1"
+            })]
+          })
+        })]
       }), /*#__PURE__*/(0, _jsxRuntime.jsxs)("svg", {
         className: "close",
         onClick: () => _NotifyManager.default.delete(id),
