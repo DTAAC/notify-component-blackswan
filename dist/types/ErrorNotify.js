@@ -8,12 +8,10 @@ var _react = _interopRequireDefault(require("react"));
 var _NotifyManager = _interopRequireDefault(require("../NotifyManager"));
 var _useRendered = _interopRequireDefault(require("./hooks/useRendered"));
 var _getNotifyStyle = _interopRequireDefault(require("./getNotifyStyle"));
-var _styles = require("./../styles");
+var _styles = require("../styles");
 var _styles2 = require("./styles");
 var _jsxRuntime = require("react/jsx-runtime");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-// @ts-ignore
-
 const ErrorNotify = _ref => {
   let {
     id,
