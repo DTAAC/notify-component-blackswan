@@ -3,8 +3,7 @@ import NotifyManager from "../NotifyManager";
 import BaseNotifyProps from "./BaseNotifyProps";
 import useRendered from "./hooks/useRendered";
 import getNotifyStyle from "./getNotifyStyle";
-import {NotifyItem} from "./../styles";
-// @ts-ignore
+import {NotifyItem} from "../styles";
 import {Content} from './styles';
 
 export const ErrorNotify: React.FC<BaseNotifyProps> = ({
