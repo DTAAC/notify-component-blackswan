@@ -5,6 +5,7 @@ import useRendered from "./hooks/useRendered";
 import getNotifyStyle from "./getNotifyStyle";
 import {NotifyItem} from "../styles";
 import {Content} from './styles';
+import closeIcon from '../images/close.svg';
 
 export const ErrorNotify: React.FC<BaseNotifyProps> = ({
                                                            id,
@@ -16,16 +17,21 @@ export const ErrorNotify: React.FC<BaseNotifyProps> = ({
     const style = getNotifyStyle(rendered, needRemove);
 
     return (
-        <NotifyItem style={{
-            ...style,
-            ...{
-                backgroundColor: '#EF5E70',
-                color: '#fff'
-            }
-        }} onClick={onClick}>
+        <NotifyItem
+            style={{
+                ...style,
+                ...{
+                    backgroundColor: '#EF5E70',
+                    color: '#fff'
+                }
+            }} onClick={onClick}>
             <Content>
                 <div className="text">{text}</div>
-                <img src={'../images/close.svg'} className="close" alt="Close" onClick={() => NotifyManager.delete(id)} />
+                <img
+                    src={closeIcon as string}
+                    className={'close'}
+                    alt={'Close'}
+                    onClick={() => NotifyManager.delete(id)}/>
             </Content>
         </NotifyItem>
     );
